@@ -9,6 +9,7 @@ public class SmartCard {
     
 
     public SmartCard(){
+        this.id = String.valueOf(System.currentTimeMillis());
         
     }
 
@@ -24,6 +25,7 @@ public class SmartCard {
     
     public void withdraw(double amount){
         if (this.balance < amount){
+            System.out.println("not enough balnace");
             return;
             
         }else{

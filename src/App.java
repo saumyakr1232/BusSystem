@@ -4,8 +4,7 @@ import busSystem.models.SmartCard;
 
 public class App {
 
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    public static void main(String[] args) {
 
 
         BusService service = BusService.getInstance();
@@ -14,15 +13,15 @@ public class App {
         card1.deposite(100);
 
         SmartCard card2 = new SmartCard();
-        card2.deposite(8);
+        card2.deposite(18);
 
-        BusJourney journey1 = service.startJourney(2, card1);
-
-
-        BusJourney journey2 = service.startJourney(14, card2);
+        // BusJourney journey1 = service.startJourney(2, card1);
 
 
-        service.finishJourney(journey1, 8);
+        BusJourney journey2 = service.startJourney(15, card2);
+
+
+        // service.finishJourney(journey1, 8);
         service.finishJourney(journey2, 1);
 
     }

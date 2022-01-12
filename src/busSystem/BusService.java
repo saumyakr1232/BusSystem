@@ -54,6 +54,7 @@ public class BusService {
             System.out.println("Journey not started yet.");
             return 0;
         }else{
+            System.out.println("Journey end at Station " + stop);
             journey.setStop(stop);
             double fare = calculateFare(journey);
             journey.setFare(fare);
